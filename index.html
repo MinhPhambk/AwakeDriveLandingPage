@@ -823,14 +823,20 @@
             <div class="w-slider-mask">
                 <div class="w-slide">
                     <!-- Section với background video hoặc parallax nâng cao -->
-                    <section class="section-2 section-2-v1" style="position: relative; overflow: hidden;" data-fragile-collection-id="frenz-brainband">
-                        <div class="parallax-background" style="background: url('./public/bg.jpg') center center / cover no-repeat; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></div>
-            
-                        <div class="slide-1--content w-layout-blockcontainer container-global introducing-frenzband w-container">
+                    <section class="section-2 section-2-v1" style="position: relative; overflow: hidden;"
+                        data-fragile-collection-id="frenz-brainband">
+                        <div class="parallax-background"
+                            style="background: url('./public/bg.jpg') center center / cover no-repeat; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;">
+                        </div>
+
+                        <div
+                            class="slide-1--content w-layout-blockcontainer container-global introducing-frenzband w-container">
                             <!-- Content Wrapper with Flexbox for Centering -->
-                            <div class="slide-content-wrapper" style="display: flex; align-items: center; justify-content: space-between; height: 100%;">
+                            <div class="slide-content-wrapper"
+                                style="display: flex; align-items: center; justify-content: space-between; height: 100%;">
                                 <!-- Left content with advanced animations -->
-                                <div class="slide-1--content-left animated-content" style="flex: 1; padding: 40px; box-sizing: border-box;">
+                                <div class="slide-1--content-left animated-content"
+                                    style="flex: 1; padding: 40px; box-sizing: border-box;">
                                     <div class="content-block">
                                         <div class="paragraph banner-v1" style="bottom: 30px;">
                                             <div>Giới thiệu về <b>AWAKE DRIVE</b></div>
@@ -842,10 +848,12 @@
                                         </div>
                                     </div>
                                 </div>
-            
+
                                 <!-- Right content with interactive hover effect -->
-                                <div class="slide-1--content-right hidden-content" style="width: 45%; padding: 20px; box-sizing: border-box;">
-                                    <div class="hover-text" style="font-size: 1.8rem; opacity: 0; transition: opacity 0.4s ease;">
+                                <div class="slide-1--content-right hidden-content"
+                                    style="width: 45%; padding: 20px; box-sizing: border-box;">
+                                    <div class="hover-text"
+                                        style="font-size: 1.8rem; opacity: 0; transition: opacity 0.4s ease;">
                                         Khám phá ngay!
                                     </div>
                                 </div>
@@ -854,20 +862,21 @@
                     </section>
                 </div>
             </div>
-            
+
             <!-- Style và Animations -->
             <style>
                 /* Parallax background effect */
                 .parallax-background {
-                    transform: translateY(0); /* Default position */
+                    transform: translateY(0);
+                    /* Default position */
                 }
-            
+
                 /* Khi cuộn trang, làm cho background di chuyển nhẹ */
                 .w-slider-mask {
                     position: relative;
                     overflow: hidden;
                 }
-            
+
                 .slide-1--content-left {
                     background: rgba(0, 0, 0, 0.7);
                     padding: 40px;
@@ -876,17 +885,21 @@
                     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
                     transition: transform 0.4s ease, box-shadow 0.4s ease;
                     flex-shrink: 0;
-                    transform: translateY(20px); /* Bắt đầu từ phía dưới */
-                    max-height: 500px; /* Đảm bảo nội dung không bị vượt quá vùng chứa */
+                    transform: translateY(20px);
+                    /* Bắt đầu từ phía dưới */
+                    max-height: 500px;
+                    /* Đảm bảo nội dung không bị vượt quá vùng chứa */
                     overflow: hidden;
                 }
-            
+
                 .slide-1--content-left:hover {
-                    transform: translateY(0) scale(1.1); /* Hiệu ứng phóng to và di chuyển */
+                    transform: translateY(0) scale(1.1);
+                    /* Hiệu ứng phóng to và di chuyển */
                     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
-                    filter: brightness(1.2); /* Ánh sáng tăng khi hover */
+                    filter: brightness(1.2);
+                    /* Ánh sáng tăng khi hover */
                 }
-            
+
                 /* Gradient Text */
                 .gradient-text {
                     background: linear-gradient(45deg, #ff4081, #00e5ff);
@@ -898,69 +911,71 @@
                     letter-spacing: 3px;
                     animation: fadeInUp 1.2s ease-out;
                 }
-            
+
                 /* Animation khi cuộn vào */
                 .animated-content {
                     animation: fadeInUp 1s ease-out;
                 }
-            
+
                 @keyframes fadeInUp {
                     0% {
                         opacity: 0;
                         transform: translateY(50px);
                     }
+
                     100% {
                         opacity: 1;
                         transform: translateY(0);
                     }
                 }
-            
+
                 /* Hidden text hover effect */
                 .hidden-content:hover .hover-text {
                     opacity: 1;
                 }
-            
+
                 /* Animation cho phần văn bản khi cuộn vào */
                 @keyframes revealOnScroll {
                     0% {
                         opacity: 0;
                         transform: translateY(100px);
                     }
+
                     100% {
                         opacity: 1;
                         transform: translateY(0);
                     }
                 }
-            
+
                 /* Responsive Design */
                 @media (max-width: 1024px) {
                     .slide-content-wrapper {
                         flex-direction: column;
                         align-items: center;
                     }
-            
+
                     .slide-1--content-left {
                         width: 80%;
                         margin-bottom: 20px;
                     }
-            
+
                     .slide-1--content-right {
                         width: 80%;
                         margin-bottom: 20px;
                     }
                 }
-            
+
                 @media (max-width: 767px) {
                     .slide-1--content-left {
                         width: 100%;
                     }
-            
+
                     .slide-1--content-right {
                         width: 100%;
                     }
                 }
             </style>
-            
+
             <!-- Script Parallax và Scroll-triggered Animations -->
             <script>
                 // Parallax effect for background on scroll
@@ -969,23 +984,23 @@
                     var scrollPosition = window.pageYOffset;
                     parallax.style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
                 });
-            
+
                 // Scroll-triggered animation for content
-                document.addEventListener('scroll', function() {
+                document.addEventListener('scroll', function () {
                     var content = document.querySelectorAll('.animated-content');
-                    content.forEach(function(element) {
+                    content.forEach(function (element) {
                         if (isInViewport(element)) {
                             element.classList.add('fadeInUp');
                         }
                     });
                 });
-            
+
                 function isInViewport(element) {
                     var rect = element.getBoundingClientRect();
                     return rect.top <= window.innerHeight && rect.bottom >= 0;
                 }
             </script>
-            
+
             <!-- <div class="left-arrow w-slider-arrow-left">
                 <div class="icon w-icon-slider-left"></div>
             </div>
@@ -1169,77 +1184,66 @@
                         class="gradient-text">Chứng nhận - Giải thưởng</span></h1>
                 <div data-w-id="06ccb01c-3408-c558-967e-16bdc5eb4df2" class="div-block-16 featured-logo--new">
                     <style>
-                        .logo-image2 {
-                            width: 100%;
-                            max-width: 500px;
-                            height: auto;
+                        .logo-image {
+                            max-width: 100%;
+                            max-height: 100%;
                             object-fit: contain;
+                            display: block;
                         }
 
-                        .logo-image1 {
-                            width: 100%;
-                            max-width: 200px !important;
-                            height: auto;
-                            object-fit: contain;
-                        }
-
-                        .featured-logo-div1--top {
+                        .featured-logo-row {
                             display: flex;
+                            flex-wrap: wrap;
                             justify-content: center;
                             gap: 40px;
-                            flex-wrap: wrap;
                             margin-bottom: 20px;
                         }
 
-                        .featured-logo-div--bottom {
+                        .featured-logo-item {
                             display: flex;
-                            width: 100%;
-                            gap: 40px;
-                            /* 👈 Khoảng cách giữa 2 ảnh */
-                        }
-
-                        .featured-logo-div1 {
-                            flex: 1;
-                            display: flex;
+                            justify-content: center;
                             align-items: center;
+                            height: 150px;
+                            flex: 1 1 200px;
+                            /* chiều rộng tối thiểu ảnh */
+                            max-width: 300px;
+                            /* giới hạn tối đa */
                         }
 
-                        .featured-logo-div1--4 {
-                            justify-content: flex-end;
+                        @media (max-width: 768px) {
+                            .featured-logo-item {
+                                flex: 1 1 45%;
+                            }
                         }
 
-                        .featured-logo-div1--5 {
-                            justify-content: flex-start;
+                        @media (max-width: 500px) {
+                            .featured-logo-item {
+                                flex: 1 1 100%;
+                            }
                         }
                     </style>
 
-
-                    <div class="featured-logo-div--top">
-                        <a class="featured-logo-div1 featured-logo-div1--new featured-logo-div1--1 w-inline-block">
-                            <img src="./public/aw1.svg" loading="lazy" alt="" class="logo-image2"
-                                srcset="./public/aw1.svg">
+                    <div class="featured-logo-row top">
+                        <a class="featured-logo-item w-inline-block">
+                            <img src="./public/aw1.svg" loading="lazy" alt="" class="logo-image">
                         </a>
-                        <a class="featured-logo-div1 featured-logo-div1--new featured-logo-div1--2 w-inline-block">
-                            <img src="./public/aw2.svg" loading="lazy" alt="" class="logo-image2"
-                                srcset="./public/aw2.svg">
+                        <a class="featured-logo-item w-inline-block">
+                            <img src="./public/aw2.svg" loading="lazy" alt="" class="logo-image">
                         </a>
-                        <a class="featured-logo-div1 featured-logo-div1--new featured-logo-div1--3 w-inline-block">
-                            <img src="./public/aw3.svg" loading="lazy" alt="" class="logo-image2"
-                                srcset="./public/aw3.svg">
+                        <a class="featured-logo-item w-inline-block">
+                            <img src="./public/aw3.svg" loading="lazy" alt="" class="logo-image">
                         </a>
                     </div>
-
-                    <div class="featured-logo-div--bottom">
-                        <a class="featured-logo-div1 featured-logo-div1--new featured-logo-div1--4 w-inline-block">
-                            <img src="./public/aw4.svg" loading="lazy" alt="" class="logo-image2 logo-image1"
-                                srcset="./public/aw4.svg">
+                </div>
+                <div data-w-id="06ccb01c-3408-c558-967e-16bdc5eb4df2" class="div-block-16 featured-logo--new">
+                    <div class="featured-logo-row bottom">
+                        <a class="featured-logo-item w-inline-block">
+                            <img src="./public/aw4.svg" loading="lazy" alt="" class="logo-image">
                         </a>
-                        <a class="featured-logo-div1 featured-logo-div1--new featured-logo-div1--5 w-inline-block">
-                            <img src="./public/aw5.svg" loading="lazy" alt="" class="logo-image2 logo-image1"
-                                srcset="./public/aw5.svg">
+                        <a class="featured-logo-item w-inline-block">
+                            <img src="./public/aw5.svg" loading="lazy" alt="" class="logo-image">
                         </a>
                     </div>
-
                 </div>
             </div>
 
@@ -1289,13 +1293,13 @@
                         <img class="image-2" src="./public/ad1.svg" alt="" loading="lazy" srcset="./public/ad1.svg">
                     </div>
                     <div class="list-banner--top-item list-banner--top-2">
-                        <img class="image-2" src="./public/ad2.svg" alt="" loading="lazy" srcset="./public/ad2.svg">
+                        <img class="image-2" src="./public/ad33.png" alt="" loading="lazy" srcset="./public/ad33.png">
                     </div>
                 </div>
 
                 <div data-w-id="2364b782-4f50-aed3-db62-46cc76bad5e4" class="list-banner--top-bottom list-banner--top">
                     <div class="list-banner--top-item list-banner--top-3">
-                        <img class="image-2" src="./public/ad3.svg" alt="" loading="lazy" srcset="./public/ad3.svg">
+                        <img class="image-2" src="./public/ad2.svg" alt="" loading="lazy" srcset="./public/ad2.svg">
                     </div>
                     <div class="list-banner--top-item list-banner--top-4">
                         <img class="image-2" src="./public/ad4.svg" alt="" loading="lazy" srcset="./public/ad4.svg">
@@ -1321,58 +1325,59 @@
             <div class="user-reviews-section w-layout-blockcontainer container-global w-container">
                 <h1 data-w-id="06ccb01c-3408-c558-967e-16bdc5eb4def" class="heading heading-awared"><span
                         class="gradient-text">Mọi người nói gì về chúng tôi?</span></h1>
-                        <div data-w-id="06ccb01c-3408-c558-967e-16bdc5eb4df2" class="user-reviews-content">
-                            <style>
-                                .responsive-grid {
-                                    display: grid;
-                                    grid-template-columns: repeat(4, 1fr);
-                                    gap: 20px;
-                                    width: 100%;
-                                }
-                        
-                                .responsive-grid-item {
-                                    width: 100%;
-                                    height: 100%;
-                                    overflow: hidden;
-                                }
-                        
-                                .responsive-grid-item img {
-                                    width: 100%;
-                                    height: 100%;
-                                    object-fit: contain;  /* dùng contain để ảnh không bị méo */
-                                    display: block;
-                                }
-                        
-                                @media (max-width: 1023px) {
-                                    .responsive-grid {
-                                        grid-template-columns: repeat(2, 1fr);
-                                    }
-                                }
-                        
-                                @media (max-width: 767px) {
-                                    .responsive-grid {
-                                        grid-template-columns: 1fr;
-                                    }
-                                }
-                            </style>
-                        
-                            <div class="responsive-grid">
-                                <div class="responsive-grid-item">
-                                    <img src="./public/az1.svg" alt="ad1">
-                                </div>
-                                <div class="responsive-grid-item">
-                                    <img src="./public/az2.svg" alt="ad2">
-                                </div>
-                                <div class="responsive-grid-item">
-                                    <img src="./public/az3.svg" alt="ad3">
-                                </div>
-                                <div class="responsive-grid-item">
-                                    <img src="./public/az4.svg" alt="ad4">
-                                </div>
-                            </div>
-                        
+                <div data-w-id="06ccb01c-3408-c558-967e-16bdc5eb4df2" class="user-reviews-content">
+                    <style>
+                        .responsive-grid {
+                            display: grid;
+                            grid-template-columns: repeat(4, 1fr);
+                            gap: 20px;
+                            width: 100%;
+                        }
+
+                        .responsive-grid-item {
+                            width: 100%;
+                            height: 100%;
+                            overflow: hidden;
+                        }
+
+                        .responsive-grid-item img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                            /* dùng contain để ảnh không bị méo */
+                            display: block;
+                        }
+
+                        @media (max-width: 1023px) {
+                            .responsive-grid {
+                                grid-template-columns: repeat(2, 1fr);
+                            }
+                        }
+
+                        @media (max-width: 767px) {
+                            .responsive-grid {
+                                grid-template-columns: 1fr;
+                            }
+                        }
+                    </style>
+
+                    <div class="responsive-grid">
+                        <div class="responsive-grid-item">
+                            <img src="./public/az1.svg" alt="ad1">
                         </div>
-                        
+                        <div class="responsive-grid-item">
+                            <img src="./public/az2.svg" alt="ad2">
+                        </div>
+                        <div class="responsive-grid-item">
+                            <img src="./public/az3.svg" alt="ad3">
+                        </div>
+                        <div class="responsive-grid-item">
+                            <img src="./public/az4.svg" alt="ad4">
+                        </div>
+                    </div>
+
+                </div>
+
                 <a data-w-id="7794c007-d967-9558-bc69-5cdb09dfac92" href="/pages/reviews"
                     class="button center-button round-white-btn buy-now-section-1 gradient-background w-button">Xem
                     thêm<span class="fontawesome"></span></a>
@@ -1423,13 +1428,14 @@
                 <!-- <div class="paragraph paragraph-dark uppercase-subttile">Intelligent Playlist</div> -->
                 <h1 data-w-id="d591c0d0-9972-a672-dba1-bbbab4ed2b61" class="heading your-brainwaves"><span
                         class="gradient-text">Chạy bản thử nghiệm</span></h1>
-                        <span class="audio-link">
-                            <!-- Sử dụng thẻ <a> để chuyển hướng đến Google Play -->
-                            <a href="https://play.google.com/store/search?q=pub%3ANeural%20of%20Things&c=apps" target="_blank" class="audio-play--component lightbox-link w-inline-block">
-                                <div class="paragraph paragraph-dark hear-a-sample">Tìm trên CH Play</div>
-                                <div class="text-block-23 audio-play--icon"></div>
-                            </a>
-                        </span>                    
+                <span class="audio-link">
+                    <!-- Sử dụng thẻ <a> để chuyển hướng đến Google Play -->
+                    <a href="https://play.google.com/store/search?q=pub%3ANeural%20of%20Things&c=apps" target="_blank"
+                        class="audio-play--component lightbox-link w-inline-block">
+                        <div class="paragraph paragraph-dark hear-a-sample">Tìm trên CH Play</div>
+                        <div class="text-block-23 audio-play--icon"></div>
+                    </a>
+                </span>
                 <div
                     class="paragraph paragraph-dark paragraph-with-button ultimate-para home-ultimate-para home-ultra-v1">
                     Awake Drive đo lường tín hiệu sóng não theo thời gian thực, phân tích phản hồi để xác định yếu tố
@@ -1458,7 +1464,7 @@
             </div>
             <a data-w-id="7794c007-d967-9558-bc69-5cdb09dfac92" href="/pages/how-it-works"
                 class="button center-button round-white-btn buy-now-section-1 gradient-background w-button">Cách sử
-                dụng? <span class="fontawesome"></span></a>
+                dụng <span class="fontawesome"></span></a>
 
 
             <script>var currentSection = document.currentScript.closest('.shopify-section'); currentSection.setAttribute("data-w-id", "3773c161-1a98-cb8a-f3f9-80cd105120c1"); currentSection.setAttribute("class", "w-layout-blockcontainer container-global sv-in-onesensing-col new w-container");</script>
@@ -1497,7 +1503,7 @@
                 <div class="paragraph paragraph-dark uppercase-subttile centered-subtitle left-align-white">Tỉnh táo để
                     an toàn hơn</div>
                 <h1 data-w-id="a839429b-646c-ca77-5edc-983f56fde85b" class="heading white-heading"><span
-                        class="gradient-text">Boost Deep Sleep</span></h1>
+                        class="gradient-text">Phát hiện giấc ngủ trắng</span></h1>
                 <div data-w-id="a839429b-646c-ca77-5edc-983f56fde85f"
                     class="paragraph paragraph-dark paragraph-with-button white-paragraph white-para-new">Khả năng nhận
                     diện cơn buồn ngủ dựa trên model AI - một trong những điểm đặc biệt của sản phẩm. Model AI - nhân
@@ -2259,9 +2265,7 @@
         <section id="shopify-section-footer" class="shopify-section section-13">
             <div class="w-layout-blockcontainer container-global w-container">
                 <div class="columns-5 w-row">
-                    <div class="column-9 w-col w-col-3"><img
-                            src="./public/ab1.png"
-                            loading="lazy" alt="">
+                    <div class="column-9 w-col w-col-3"><img src="./public/ab1.png" loading="lazy" alt="">
                         <div class="text-block-11">Theo dõi chúng tôi</div>
                         <div class="div-block-8 footer--socials">
                             <a href="https://www.facebook.com/neuralofthings" target="_blank"
