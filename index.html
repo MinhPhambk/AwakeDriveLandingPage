@@ -5,6 +5,7 @@
 
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap&subset=vietnamese" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!--VEDA_ROCKET_LOADER-->
     <script src="//frenzband.com/cdn/shop/t/64/assets/veda-rocket-loader.js?v=103575202155468409771721684468"
@@ -660,11 +661,14 @@
             fill: #fff;
             width: 35px
         }
+
+        .body {
+            font-family: 'Montserrat', sans-serif !important;
+        }
     </style>
 </head>
 
-<body class=" template-index template-index header-pageold-home"
-    style="font-family: 'Montserrat', sans-serif !important;">
+<body class="header-pageold-home">
     <div id="veda-root">
         <!--VEDA_HEADER_THEME_POSITION-->
 
@@ -1146,6 +1150,219 @@
                 });
             </script>
         </div>
+
+        <section id="home-team-section" class="shopify-section section-3 as-seen-on-v1" style="font-family: 'Montserrat', sans-serif;">
+            <div class="w-layout-blockcontainer container-global w-container">
+                <h1 class="heading heading-awared">
+                    <span class="gradient-text">Đội ngũ Awake Drive</span>
+                </h1>
+        
+                <!-- CEO block -->
+                <div class="ceo-block">
+                    <div class="ceo-avatar">
+                        <img src="./public/b1.png" alt="CEO Avatar" loading="lazy" />
+                    </div>
+                    <div class="ceo-info">
+                        <h2>Trần Văn Lực - Founder - CEO</h2>
+                        <blockquote>
+                            "Chúng tôi chính là những nhà đầu tư ở tuổi đôi mươi. Chúng tôi đang đầu tư ước mơ, tuổi trẻ và niềm tin vào Awake Drive."
+                        </blockquote>
+                    </div>
+                </div>
+        
+                <!-- Team Grid -->
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="./public/b2.png" alt="Team Member 1" />
+                        <h3>Nguyễn Tuấn Đạt</h3>
+                        <p>CTO</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="./public/b3.png" alt="Team Member 2" />
+                        <h3>Đồng Thị Diễm Quỳnh</h3>
+                        <p>Tài chính - Marketing</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="./public/b4.png" alt="Team Member 3" />
+                        <h3>Nguyễn Bình An</h3>
+                        <p>R&D - Design</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="./public/b5.png" alt="Team Member 4" />
+                        <h3>Phạm Ngọc Minh</h3>
+                        <p>Tech leader</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <style>
+            .ceo-block {
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                margin: 60px 0;
+                flex-wrap: wrap;
+            }
+        
+            .ceo-avatar img {
+                width: 220px;
+                height: 220px;
+                object-fit: cover;
+                border-radius: 100%;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            }
+        
+            .ceo-info h2 {
+                margin: 0;
+                font-size: 24px;
+            }
+        
+            .ceo-info blockquote {
+                font-style: italic;
+                color: #555;
+                margin-top: 10px;
+            }
+        
+            .team-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 30px;
+            }
+        
+            .team-member {
+                text-align: center;
+            }
+        
+            .team-member img {
+                width: 160px;
+                height: 160px;
+                object-fit: cover;
+                border-radius: 100%;
+                margin-bottom: 10px;
+            }
+        
+            .team-member h3 {
+                margin: 0;
+                font-size: 18px;
+                font-weight: 600;
+            }
+        
+            .team-member p {
+                font-size: 14px;
+                color: #666;
+            }
+        
+            @media (max-width: 991px) {
+                .team-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+        
+            @media (max-width: 479px) {
+                .team-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+        
+
+
+        <section id="shopify-section-home-section-2" class="shopify-section section-3 as-seen-on-v1">
+            <div class="w-layout-blockcontainer container-global w-container">
+                <h1 data-w-id="06ccb01c-3408-c558-967e-16bdc5eb4def" class="heading heading-awared">
+                    <span class="gradient-text">Đối tác đồng hành</span>
+                </h1>
+
+                <style>
+                    .div-block-16 {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 40px;
+                        flex-wrap: wrap;
+                        width: 100%;
+                    }
+
+                    .featured-logo-div {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex: 1 1 200px;
+                        max-width: 400px;
+                        /* 👈 Zoom to hơn */
+                    }
+
+                    .logo-image {
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                        object-fit: contain;
+                        transition: transform 0.3s ease;
+                    }
+
+                    .logo-image:hover {
+                        transform: scale(1.1);
+                        /* 👈 Zoom khi hover */
+                    }
+
+                    @media screen and (max-width: 768px) {
+                        .featured-logo-div {
+                            flex: 1 1 45%;
+                            max-width: 100%;
+                        }
+                    }
+
+                    @media screen and (max-width: 480px) {
+                        .featured-logo-div {
+                            flex: 1 1 100%;
+                        }
+                    }
+                </style>
+
+                <div data-w-id="06ccb01c-3408-c558-967e-16bdc5eb4df2" class="div-block-16">
+                    <a class="featured-logo-div w-inline-block"
+                        href="https://web.facebook.com/BKEntrepreneurshipCenter">
+                        <img src="./public/am1.png" loading="lazy" alt="" class="logo-image" />
+                    </a>
+                    <a class="featured-logo-div w-inline-block" href="https://www.bkfund.vn/">
+                        <img src="./public/am3.png" loading="lazy" alt="" class="logo-image" />
+                    </a>
+                    <a class="featured-logo-div w-inline-block"
+                        href="https://vinuni.edu.vn/entrepreneurship-lab-a-lively-innovation-hub-for-vinuniversity-students/">
+                        <img src="./public/am2.png" loading="lazy" alt="" class="logo-image" />
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="shopify-section-home-section-2" class="shopify-section section-3 as-seen-on-v1">
+            <div class="w-layout-blockcontainer container-global w-container">
+                <h1 data-w-id="06ccb01c-3408-c558-967e-16bdc5eb4def" class="heading heading-awared"><span
+                        class="gradient-text">Nguồn lực hỗ trợ</span></h1>
+                <div data-w-id="f00809e1-9bbb-cd15-0d11-17eab792aac2" class="div-block-19">
+                    <div class="col-breakthrough"><img class="image-21" src="./public/an1.png" alt=""
+                            sizes="(max-width: 479px) 100vw, (max-width: 767px) 30vw, (max-width: 991px) 31vw, 386.671875px"
+                            loading="lazy" srcset="./public/an1.png">
+                        <div class="paragraph paragraph-dark breakthrough-title">Phòng nghiên cứu MCN.CT</div>
+                    </div>
+                    <div class="col-breakthrough"><img class="image-21" src="./public/an3.png" alt=""
+                            sizes="(max-width: 479px) 100vw, (max-width: 767px) 30vw, (max-width: 991px) 31vw, 386.671875px"
+                            loading="lazy" srcset="./public/an3.png">
+                        <div class="paragraph paragraph-dark breakthrough-title">Tiến sĩ Trịnh Văn Chiến </div>
+                    </div>
+                    <div class="col-breakthrough"><img class="image-21" src="./public/an2.png" alt=""
+                            sizes="(max-width: 479px) 100vw, (max-width: 767px) 30vw, (max-width: 991px) 31vw, 386.671875px"
+                            loading="lazy" srcset="./public/an2.png">
+                        <div class="paragraph paragraph-dark breakthrough-title">Phòng nghiên cứu Wicom</div>
+                    </div>
+                </div>
+            </div>
+            <script>var currentSection = document.currentScript.closest('.shopify-section'); currentSection.setAttribute("class", "section-3 as-seen-on-v1");</script>
+
+        </section>
+
         <section id="shopify-section-home-section-2" class="shopify-section section-3 as-seen-on-v1">
             <div class="w-layout-blockcontainer container-global w-container">
                 <h1 data-w-id="06ccb01c-3408-c558-967e-16bdc5eb4def" class="heading heading-awared"><span
@@ -1178,6 +1395,7 @@
             <script>var currentSection = document.currentScript.closest('.shopify-section'); currentSection.setAttribute("class", "section-3 as-seen-on-v1");</script>
 
         </section>
+
         <section id="shopify-section-home-section-2-1" class="shopify-section section-3 as-seen-on-v1">
             <div class="w-layout-blockcontainer container-global w-container">
                 <h1 data-w-id="06ccb01c-3408-c558-967e-16bdc5eb4def" class="heading heading-awared"><span
