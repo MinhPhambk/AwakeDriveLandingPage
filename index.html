@@ -434,18 +434,6 @@
             this.customer = false;
 
             this.proxy_path = '/apps/ecomposer-visual-page-builder';
-            this.routes = {
-                domain: 'https://frenzband.com',
-                root_url: '/',
-                collections_url: '/collections',
-                all_products_collection_url: '/collections/all',
-                cart_url: '/cart',
-                cart_add_url: '/cart/add',
-                cart_change_url: '/cart/change',
-                cart_clear_url: '/cart/clear',
-                cart_update_url: '/cart/update',
-                product_recommendations_url: '/recommendations/products'
-            };
             this.queryParams = {};
             if (window.location.search.length) {
                 new URLSearchParams(window.location.search).forEach((value, key) => {
@@ -1151,25 +1139,27 @@
             </script>
         </div>
 
-        <section id="home-team-section" class="shopify-section section-3 as-seen-on-v1" style="font-family: 'Montserrat', sans-serif;">
+        <section id="home-team-section" class="shopify-section section-3 as-seen-on-v1"
+            style="font-family: 'Montserrat', sans-serif;">
             <div class="w-layout-blockcontainer container-global w-container">
                 <h1 class="heading heading-awared">
                     <span class="gradient-text">Đội ngũ Awake Drive</span>
                 </h1>
-        
+
                 <!-- CEO block -->
                 <div class="ceo-block">
                     <div class="ceo-avatar">
                         <img src="./public/b1.png" alt="CEO Avatar" loading="lazy" />
                     </div>
                     <div class="ceo-info">
-                        <h2>Trần Văn Lực - Founder - CEO</h2>
+                        <h2>Trần Văn Lực<br><span class="ceo-title">Founder & CEO</span></h2>
                         <blockquote>
-                            "Chúng tôi chính là những nhà đầu tư ở tuổi đôi mươi. Chúng tôi đang đầu tư ước mơ, tuổi trẻ và niềm tin vào Awake Drive."
+                            "Chúng tôi chính là những nhà đầu tư ở tuổi đôi mươi. Chúng tôi đang đầu tư ước mơ, tuổi trẻ
+                            và niềm tin vào Awake Drive."
                         </blockquote>
                     </div>
                 </div>
-        
+
                 <!-- Team Grid -->
                 <div class="team-grid">
                     <div class="team-member">
@@ -1195,82 +1185,146 @@
                 </div>
             </div>
         </section>
-        
+
         <style>
             .ceo-block {
                 display: flex;
                 align-items: center;
-                gap: 40px;
-                margin: 60px 0;
+                justify-content: center;
+                gap: 50px;
+                margin: 70px 0;
+                padding: 50px;
+                background: linear-gradient(145deg, #ffffff, #f2f2f2);
+                border-radius: 24px;
+                box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
                 flex-wrap: wrap;
             }
-        
+
             .ceo-avatar img {
-                width: 220px;
-                height: 220px;
+                width: 240px;
+                height: 240px;
                 object-fit: cover;
-                border-radius: 100%;
-                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+                border-radius: 50%;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                border: 6px solid #fff;
+                transition: transform 0.3s ease;
             }
-        
+
+            .ceo-avatar img:hover {
+                transform: scale(1.03);
+            }
+
+            .ceo-info {
+                max-width: 500px;
+            }
+
             .ceo-info h2 {
-                margin: 0;
-                font-size: 24px;
+                margin: 0 0 15px;
+                font-size: 28px;
+                font-weight: 700;
+                line-height: 1.3;
+                color: #222;
             }
-        
+
+            .ceo-info .ceo-title {
+                font-size: 18px;
+                font-weight: 500;
+                color: #6C63FF;
+                display: block;
+                margin-top: 5px;
+            }
+
             .ceo-info blockquote {
                 font-style: italic;
-                color: #555;
-                margin-top: 10px;
+                font-size: 17px;
+                line-height: 1.6;
+                color: #444;
+                position: relative;
+                padding-left: 30px;
+                border-left: 4px solid #6C63FF;
             }
-        
+
+            .ceo-info blockquote::before {
+                content: "“";
+                font-size: 60px;
+                color: #6C63FF;
+                position: absolute;
+                left: -10px;
+                top: -20px;
+                line-height: 1;
+                font-family: serif;
+                opacity: 0.2;
+            }
+
             .team-grid {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
                 gap: 30px;
+                margin-top: 60px;
             }
-        
+
             .team-member {
                 text-align: center;
             }
-        
+
             .team-member img {
                 width: 160px;
                 height: 160px;
                 object-fit: cover;
-                border-radius: 100%;
-                margin-bottom: 10px;
+                border-radius: 50%;
+                margin-bottom: 12px;
+                box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
             }
-        
+
             .team-member h3 {
                 margin: 0;
                 font-size: 18px;
                 font-weight: 600;
             }
-        
+
             .team-member p {
                 font-size: 14px;
                 color: #666;
             }
-        
+
             @media (max-width: 991px) {
                 .team-grid {
                     grid-template-columns: repeat(2, 1fr);
                 }
+
+                .ceo-block {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .ceo-info {
+                    max-width: 100%;
+                }
             }
-        
+
             @media (max-width: 479px) {
                 .team-grid {
                     grid-template-columns: 1fr;
                 }
+
+                .ceo-block {
+                    padding: 30px;
+                }
+
+                .ceo-info h2 {
+                    font-size: 22px;
+                }
+
+                .ceo-info blockquote {
+                    font-size: 15px;
+                }
             }
         </style>
-        
 
 
         <section id="shopify-section-home-section-2" class="shopify-section section-3 as-seen-on-v1">
             <div class="w-layout-blockcontainer container-global w-container">
-                <h1 data-w-id="06ccb01c-3408-c558-967e-16bdc5eb4def" class="heading heading-awared">
+                <h1 class="heading heading-awared">
                     <span class="gradient-text">Đối tác đồng hành</span>
                 </h1>
 
@@ -1278,38 +1332,58 @@
                     .div-block-16 {
                         display: flex;
                         justify-content: center;
-                        align-items: center;
-                        gap: 40px;
+                        align-items: stretch;
                         flex-wrap: wrap;
-                        width: 100%;
+                        gap: 40px;
+                        margin-top: 40px;
                     }
 
                     .featured-logo-div {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
                         flex: 1 1 200px;
-                        max-width: 400px;
-                        /* 👈 Zoom to hơn */
+                        max-width: 280px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 16px 12px;
+                        border-radius: 16px;
+                        background: #fff;
+                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+                        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+                        text-align: center;
+                    }
+
+                    .featured-logo-div:hover {
+                        transform: translateY(-4px);
+                        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
                     }
 
                     .logo-image {
-                        width: 100%;
-                        height: auto;
-                        display: block;
+                        width: 200% !important;
+                        max-height: 200% !important;
+                        max-height: 300px;
                         object-fit: contain;
+                        margin-bottom: 12px;
                         transition: transform 0.3s ease;
                     }
 
                     .logo-image:hover {
-                        transform: scale(1.1);
-                        /* 👈 Zoom khi hover */
+                        transform: scale(1.05);
+                    }
+
+                    .logo-caption {
+                        font-size: 13px;
+                        font-weight: 400;
+                        color: #777;
+                        line-height: 1.4;
+                        margin-top: auto;
+                        font-style: italic;
+                        letter-spacing: 0.2px;
+                        max-width: 90%;
                     }
 
                     @media screen and (max-width: 768px) {
                         .featured-logo-div {
                             flex: 1 1 45%;
-                            max-width: 100%;
                         }
                     }
 
@@ -1320,21 +1394,26 @@
                     }
                 </style>
 
-                <div data-w-id="06ccb01c-3408-c558-967e-16bdc5eb4df2" class="div-block-16">
-                    <a class="featured-logo-div w-inline-block"
-                        href="https://web.facebook.com/BKEntrepreneurshipCenter">
-                        <img src="./public/am1.png" loading="lazy" alt="" class="logo-image" />
+                <div class="div-block-16">
+                    <a class="featured-logo-div w-inline-block" href="https://web.facebook.com/BKEntrepreneurshipCenter"
+                        target="_blank">
+                        <img src="./public/am1.png" alt="BK Entrepreneurship Center" class="logo-image" />
+                        <div class="logo-caption">Trung tâm khởi nghiệp ĐH Bách Khoa</div>
                     </a>
-                    <a class="featured-logo-div w-inline-block" href="https://www.bkfund.vn/">
-                        <img src="./public/am3.png" loading="lazy" alt="" class="logo-image" />
+                    <a class="featured-logo-div w-inline-block" href="https://www.bkfund.vn/" target="_blank">
+                        <img src="./public/am3.png" alt="BK Fund" class="logo-image" />
+                        <div class="logo-caption">BK Fund – Quỹ đầu tư khởi nghiệp Bách Khoa</div>
                     </a>
                     <a class="featured-logo-div w-inline-block"
-                        href="https://vinuni.edu.vn/entrepreneurship-lab-a-lively-innovation-hub-for-vinuniversity-students/">
-                        <img src="./public/am2.png" loading="lazy" alt="" class="logo-image" />
+                        href="https://vinuni.edu.vn/entrepreneurship-lab-a-lively-innovation-hub-for-vinuniversity-students/"
+                        target="_blank">
+                        <img src="./public/am2.png" alt="VinUni E-Lab" class="logo-image" />
+                        <div class="logo-caption">VinUni E-Lab – Trung tâm đổi mới sáng tạo</div>
                     </a>
                 </div>
             </div>
         </section>
+
 
 
         <section id="shopify-section-home-section-2" class="shopify-section section-3 as-seen-on-v1">
@@ -2252,13 +2331,6 @@
                                                     width=25 height=25>Bảo hành 1 năm
                                             </div>
 
-                                            <div class="guarranty-check-day">
-                                                <img class="verified"
-                                                    src="//frenzband.com/cdn/shop/t/64/assets/icon-14-day.jpg?v=146335448158563240221721684350"
-                                                    width=25 height=25>Chính sách trả hàng - hoàn tiền. <a
-                                                    href="/pages/30-day-money-back" target="_blank">Learn more.</a>
-                                            </div>
-
                                         </div>
 
                                         <div>
@@ -2272,16 +2344,6 @@
                                             <script
                                                 src="https://truemed-public.s3.us-west-1.amazonaws.com/truemed-ads/prequal-widget.min.js"
                                                 defer></script>
-                                        </div>
-
-
-                                        <div class="shipping-note">
-                                            <p>*Awake Drive hiện đã có mặt để giao hàng tại Việt Nam. Nếu bạn quan tâm
-                                                đến việc giao hàng quốc tế, vui lòng liên hệ qua email:
-                                                neuralofthings@gmail.com<br>Hotline: <a href="tel:+84 386186183">++84
-                                                    386 186 183</a></p>
-                                            <p>* </p>
-
                                         </div>
 
                                         <a href="/products/frenz-brainband"
@@ -2522,12 +2584,11 @@
                                 <div class="div-block-9">
                                     <div class="form-block w-form">
 
-                                        <form method="post" action="/contact#contact_form" id="contact_form"
-                                            accept-charset="UTF-8" class="form"><input type="hidden" name="form_type"
-                                                value="contact" /><input type="hidden" name="utf8" value="✓" /><input
-                                                type="email" class="text-field w-input" maxlength="256"
+                                        <form method="post" id="contact_form" accept-charset="UTF-8" class="form">
+                                            <input type="hidden" name="form_type" value="contact" />
+                                            <input id="Email" type="email" class="text-field w-input" maxlength="256"
                                                 name="contact[email]" data-name="Email" placeholder="Email của bạn"
-                                                id="Email" aria-required="true" required>
+                                                aria-required="true" required>
                                             <input type="submit" value="Theo dõi" data-wait="Please wait..."
                                                 class="submit-button w-button">
                                             <script>
@@ -2571,6 +2632,41 @@
                                                 })();
                                             </script>
                                         </form>
+                                        <script>
+                                            document.addEventListener("DOMContentLoaded", function () {
+                                                const form = document.getElementById("contact_form");
+                                                const emailInput = document.getElementById("Email");
+
+                                                form.addEventListener("submit", function (e) {
+                                                    e.preventDefault();
+
+                                                    const email = emailInput.value;
+
+                                                    async function sendEmail() {
+                                                        try {
+                                                            const response = await fetch("https://e4af-42-112-211-165.ngrok-free.app/subscribe", {
+                                                                method: "POST",
+                                                                headers: {
+                                                                    "Accept": "application/json",
+                                                                    "Content-Type": "application/json"
+                                                                },
+                                                                body: JSON.stringify({ email: email })
+                                                            });
+
+                                                            const result = await response.json();
+                                                            // console.log("✅thành công:", result);
+                                                            alert("Theo dõi thành công!");
+                                                        } catch (error) {
+                                                            // console.error("❌ Gửi thất bại:", error);
+                                                            alert("Có lỗi xảy ra!");
+                                                        }
+                                                    }
+
+                                                    sendEmail(email);
+                                                });
+                                            });
+                                        </script>
+
                                         <div class="w-form-done  ">
                                             <div>Thank you! Your submission has been received!</div>
                                         </div>
